@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.User.TakePhotoActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="212dp"
+        android:layout_height="145dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        app:srcCompat="@drawable/icon_camera_512" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Lo primero será tomar una foto de la etiqueta del producto.\n \n Después deberás recortar la imagen para solo capturar los ingredientes."
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/rounded_border"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/baseline_warning_black_24"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingStart="10dp"
+        android:text="Intente tomar la foto lo mejor posible para un escaneado más rapido."
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/NormalButtonStyle"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:onClick="dispatchTakePictureIntent"
+        android:text="Tomar foto" />
+</RelativeLayout>

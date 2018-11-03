@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/grou2">
+        <item
+            android:id="@+id/doOCR"
+            android:title="Escanear ingredientes"
+            android:icon="@drawable/general_ocr" />
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/manageAccount"
+            android:title="Gestionar Cuenta"
+            android:icon="@drawable/baseline_person_black_24" />
+    </group>
+    <group android:id="@+id/group3">
+        <item
+            android:id="@+id/logout"
+            android:title="Cerrar Sesión"
+            android:icon="@drawable/round_power_settings_new_black_24" />
+    </group>
+</menu>

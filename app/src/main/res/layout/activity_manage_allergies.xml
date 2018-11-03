@@ -1,0 +1,47 @@
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawerLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="es.uca.allergioapp.Activities.Admin.ManageIngredientsActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addAllergyButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="23dp"
+            android:layout_marginEnd="22dp"
+            app:backgroundTint="@android:color/holo_green_dark"
+            app:srcCompat="@drawable/baseline_add_white_18dp" />
+
+        <ListView
+            android:id="@+id/allergiesList"
+            android:layout_width="match_parent"
+            android:layout_height="511dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="56dp"
+            android:scrollbars="vertical">
+
+        </ListView>
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|left"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/my_navigation_items_admin" />
+</android.support.v4.widget.DrawerLayout>

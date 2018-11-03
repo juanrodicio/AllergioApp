@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".Activities.Admin.AddAllergyActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <EditText
+            android:id="@+id/allergyNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="69dp"
+            android:ems="10"
+            android:hint="Nombre de la alergia"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/allergyDescText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="135dp"
+            android:baselineAligned="false"
+            android:ems="10"
+            android:hint="Descripción"
+            android:inputType="text|textAutoCorrect|textMultiLine"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:maxLines="4"
+            android:lines="4" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ingredientsList"
+            android:layout_centerHorizontal="true"
+            android:text="Selecciona los ingredientes relacionados con esta alergia"
+            android:textAlignment="center" />
+
+        <ListView
+            android:id="@+id/ingredientsList"
+            android:layout_width="208dp"
+            android:layout_height="232dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="73dp"
+            android:dividerHeight="0sp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:isScrollContainer="false"
+            android:scrollbars="vertical" />
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            android:onClick="addAllergy"
+            android:text="Añadir alergia"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|left"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/my_navigation_items_admin" />
+
+</android.support.v4.widget.DrawerLayout>
