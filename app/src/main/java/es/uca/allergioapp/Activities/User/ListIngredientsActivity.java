@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.annimon.stream.Stream;
@@ -96,9 +97,11 @@ public class ListIngredientsActivity extends AppCompatActivity {
                                 .forEach(allergicIngredients::add);
 
                         if (allergicIngredients.contains(ingredients.get(position))) {
-                            view.setBackgroundColor(getResources().getColor(R.color.red_ingredient, getTheme()));
+                            TextView rowText = view.findViewById(R.id.rowTextView);
+                            rowText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.warning_red_icon, 0, 0, 0);
                         } else {
-                            view.setBackgroundColor(getResources().getColor(R.color.bg_slider_screen2, getTheme()));
+                            TextView rowText = view.findViewById(R.id.rowTextView);
+                            rowText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.check_green_icon, 0, 0, 0);
                         }
                     }
 

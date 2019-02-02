@@ -24,7 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AllergioApiClient {
 
-    private static final String BASE_URL = "http://52.47.55.84:8081/api/";
+    private static final String BASE_URL = "http://34.238.162.219:8081/api/";
     private static Retrofit retrofit = null;
 
     public AllergioApiClient() {
