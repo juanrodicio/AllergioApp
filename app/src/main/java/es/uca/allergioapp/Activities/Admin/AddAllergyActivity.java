@@ -165,12 +165,17 @@ public class AddAllergyActivity extends AppCompatActivity {
 
         if (getIntent().hasExtra("allergyName")) {
             allergyNameText.setText(getIntent().getStringExtra("allergyName"));
+            allergyNameText.setEnabled(false);
+
             allergyDescText.setText(getIntent().getStringExtra("allergyDesc"));
 
             retrieveAllCheckedIngredients(getIntent().getStringArrayListExtra("allergyRelatedIngredients"));
 
-        } else
+        } else {
+            allergyNameText.setEnabled(true);
             retrieveAllIngredients();
+        }
+
     }
 
     public void addAllergy(View view) {
